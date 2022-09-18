@@ -86,7 +86,6 @@ def main():
         get_variable_name(documents[best_indexes[1]]),
         sim
     ))
-    # Please turn debug = True in line 12 if you want to see intermediate steps and values
 
 
 def get_variable_name(var):
@@ -95,3 +94,4 @@ def get_variable_name(var):
 
 if __name__ == '__main__':
     main()
+    # Please set debug = True in line 12 if you want to see intermediate steps and values
