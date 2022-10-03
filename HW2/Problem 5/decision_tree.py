@@ -98,7 +98,7 @@ def main(data_test, data_test_labels):
         # print the accuracy of this model during the 10 runs (training and test set).
         # your output should be something like that: final accuracy when training on cheat_training_1.csv: 0.2
         # --> add your Python code here
-        print('final accuracy when training on {}: {}'.format(ds, average_model_accuracy))
+        print('final accuracy when training on {}: {}'.format(ds, round(average_model_accuracy, 3)))
 
 
 def transform_row(data_row):
