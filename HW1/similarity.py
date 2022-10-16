@@ -7,9 +7,10 @@
 # -----------------------------------------------------------*/
 # Importing some Python libraries
 import numpy as np
+import string
 from sklearn.metrics.pairwise import cosine_similarity
 
-debug = False  # feel free to turn this on if you want to see the intermediate steps
+debug = True  # feel free to turn this on if you want to see the intermediate steps
 
 # Defining the documents
 doc1 = "Soccer is my favorite sport"
@@ -43,7 +44,7 @@ def create_document_matrix(docs):
 def vectorize_document(document, keys):
     new_keys = [key.lower() for key in keys]  # need to lowercase keys because we'll lowercase the word when checking
     array = [0 for i in range(len(keys))]  # create the base vector
-    for word in document.split():
+    for word in document.translate(str.maketrans('', '', string.punctuation)).split():  # remove punctuation and split
         try:
             array[new_keys.index(word.lower())] += 1  # try and increment the vector if word is in keys
         except ValueError:
