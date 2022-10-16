@@ -10,7 +10,7 @@ import numpy as np
 import string
 from sklearn.metrics.pairwise import cosine_similarity
 
-debug = True  # feel free to turn this on if you want to see the intermediate steps
+debug = False  # feel free to turn this on if you want to see the intermediate steps
 
 # Defining the documents
 doc1 = "Soccer is my favorite sport"
